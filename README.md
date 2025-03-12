@@ -8,7 +8,7 @@
 - Optimize memory usage to improve efficiency and scalability.
 - Implement a CI/CD pipeline with GitHub Actions for automated testing and deployment.
 - Apply prompt engineering techniques to enhance AI-driven workflows and documentation.
-## Installation and Run Project
+## Installation and Run Project 🌐📂 :
 If you would like to run or contribute to this project, follow the steps below to set it up on your local machine.
 
 ### Fork or Clone the Repository
