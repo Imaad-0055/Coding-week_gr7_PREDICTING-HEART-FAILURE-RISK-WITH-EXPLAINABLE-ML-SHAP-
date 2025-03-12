@@ -99,7 +99,9 @@ git clone https://github.com/username/Coding-week_gr7_PREDICTING-HEART-FAILURE-R
 #### Create a virtual environment:
 
 virtualenv venv
+
 source venv/bin/activate  # macOS/Linux
+
 venv\Scripts\activate  # Windows
 
 #### Install dependencies:
