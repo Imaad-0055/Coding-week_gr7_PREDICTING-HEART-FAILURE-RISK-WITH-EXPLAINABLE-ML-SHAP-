@@ -98,19 +98,19 @@ git clone https://github.com/username/Coding-week_gr7_PREDICTING-HEART-FAILURE-R
 
 #### Create a virtual environment:
 
-virtualenv venv
+```virtualenv venv
 
 source venv/bin/activate  # macOS/Linux
 
-venv\Scripts\activate  # Windows
-
+venv\Scripts\activate  # Windows 
+```
 #### Install dependencies:
 
-pip install -r requirements.txt
+```pip install -r requirements.txt ```
 
 #### Run the Python script:
 
-'''python main.py'''
+```python main.py```
 
 
 
