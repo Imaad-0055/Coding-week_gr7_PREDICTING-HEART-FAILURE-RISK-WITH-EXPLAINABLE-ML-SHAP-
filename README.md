@@ -110,7 +110,7 @@ pip install -r requirements.txt
 
 #### Run the Python script:
 
-python main.py
+'''python main.py'''
 
 
 
