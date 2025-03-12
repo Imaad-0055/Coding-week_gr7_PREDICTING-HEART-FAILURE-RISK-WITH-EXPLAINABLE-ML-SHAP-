@@ -12,42 +12,42 @@
 If you would like to run or contribute to this project, follow the steps below to set it up on your local machine.
 
 ### Fork or Clone the Repository
-Fork the repository: If you want to contribute to this project, you should fork it first. This will create a copy of the repository in your own GitHub account where you can make changes without affecting the original project.
+- Fork the repository: If you want to contribute to this project, you should fork it first. This will create a copy of the repository in your own GitHub account where you can make changes without affecting the original project.
 
-Go to the project repository.
-Click the Fork button at the top right of the page.
-Clone the repository: After forking the repository (or if you just want to run it without contributing), clone it to your local machine. You can do this with the following steps:
+- Go to the project repository.
+- Click the Fork button at the top right of the page.
+- Clone the repository: After forking the repository (or if you just want to run it without contributing), clone it to your local machine. You can do this with the following steps:
 
-Navigate to the repository page (after forking or directly cloning).
+- Navigate to the repository page (after forking or directly cloning).
 
-Copy the repository URL: https://github.com/username/Coding-week_gr7_PREDICTING-HEART-FAILURE-RISK-WITH-EXPLAINABLE-ML-SHAP.git (replace username with your GitHub username).
+- Copy the repository URL: https://github.com/username/Coding-week_gr7_PREDICTING-HEART-FAILURE-RISK-WITH-EXPLAINABLE-ML-SHAP.git (replace username with your GitHub username).
 
-Open your terminal and navigate to the folder where you want to store the project.
+- Open your terminal and navigate to the folder where you want to store the project.
 
-Run the following command to clone the repository:
+- Run the following command to clone the repository:
 
 ```git clone https://github.com/username/Coding-week_gr7_PREDICTING-HEART-FAILURE-RISK-WITH-EXPLAINABLE-ML-SHAP.git```
 
 ### Set Up the Environment
 It’s a good practice to set up a virtual environment to avoid conflicts with other Python packages you have installed. Follow these steps to create a virtual environment:
 
-#### Install Virtualenv (if not installed): If you don't have virtualenv installed, install it via pip:
+### Install Virtualenv (if not installed): If you don't have virtualenv installed, install it via pip:
 
 ```pip install virtualenv```
 
-#### Create a virtual environment:
+### Create a virtual environment:
 
 In your terminal, navigate to the project directory (where requirements.txt is located) and create a virtual environment:
 
 ```virtualenv venv```
 
-#### Activate the virtual environment:
+### Activate the virtual environment:
 
-##### On macOS/Linux:
+#### On macOS/Linux:
 
 ```source venv/bin/activate```
 
-##### On Windows:
+#### On Windows:
 
 ```venv\Scripts\activate```
 
