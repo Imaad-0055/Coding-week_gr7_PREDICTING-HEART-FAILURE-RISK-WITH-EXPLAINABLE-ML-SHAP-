@@ -26,30 +26,30 @@ Open your terminal and navigate to the folder where you want to store the projec
 
 Run the following command to clone the repository:
 
-git clone https://github.com/username/Coding-week_gr7_PREDICTING-HEART-FAILURE-RISK-WITH-EXPLAINABLE-ML-SHAP.git
+```git clone https://github.com/username/Coding-week_gr7_PREDICTING-HEART-FAILURE-RISK-WITH-EXPLAINABLE-ML-SHAP.git```
 
 ### Set Up the Environment
 It’s a good practice to set up a virtual environment to avoid conflicts with other Python packages you have installed. Follow these steps to create a virtual environment:
 
 #### Install Virtualenv (if not installed): If you don't have virtualenv installed, install it via pip:
 
-pip install virtualenv
+```pip install virtualenv```
 
 #### Create a virtual environment:
 
 In your terminal, navigate to the project directory (where requirements.txt is located) and create a virtual environment:
 
-virtualenv venv
+```virtualenv venv```
 
 #### Activate the virtual environment:
 
 ##### On macOS/Linux:
 
-source venv/bin/activate
+```source venv/bin/activate```
 
 ##### On Windows:
 
-venv\Scripts\activate
+```venv\Scripts\activate```
 
 ### Install Project Dependencies
 Now that your virtual environment is set up, install the required Python libraries and dependencies using the requirements.txt file.
@@ -58,7 +58,7 @@ Ensure you're in the project directory where the requirements.txt file is locate
 
 Run the following command to install all dependencies:
 
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
 ### Prepare the Data
 For this project, you will need to have the dataset used in the project. The dataset is heart_failure_clinical_records_dataset.csv.
@@ -75,14 +75,14 @@ Once everything is set up, you can run the project.
 Running the Python Script
 You can execute it by running:
 
-python main.py
+```python main.py```
 
 ### Troubleshooting
 If you encounter issues during the setup or execution of the project, here are a few steps to resolve common problems:
 
 Missing dependencies: Ensure all libraries are installed. You can check this by running:
 
-pip list
+```pip list```
 
 This will list all installed packages. If you notice a missing package, you can install it using pip.
 
@@ -94,7 +94,7 @@ To summarize, here are the key commands you need to follow to set up and run the
 
 #### Clone the repository:
 
-git clone https://github.com/username/Coding-week_gr7_PREDICTING-HEART-FAILURE-RISK-WITH-EXPLAINABLE-ML-SHAP.git
+```git clone https://github.com/username/Coding-week_gr7_PREDICTING-HEART-FAILURE-RISK-WITH-EXPLAINABLE-ML-SHAP.git```
 
 #### Create a virtual environment:
 
