@@ -1,0 +1,30 @@
+name: CI/CD Pipeline
+
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🛠 Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: 📦 Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      - name: 📌 Install Dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: ✅ Run Tests
+        run: |
+          pytest  # Assuming you have unit tests using pytest
