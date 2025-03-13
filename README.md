@@ -130,4 +130,81 @@ venv\Scripts\activate  # Windows
 
 ```jupyter notebook```
 
+## Data Preprocessing Pipeline - Heart Failure Dataset
+This repository provides a data preprocessing pipeline for the heart failure clinical records dataset, aimed at preparing the data for machine learning model training. The preprocessing steps include outlier detection and handling, transformations on continuous variables, and class imbalance handling. This README describes the process in detail.
+
+#### 1. What is the purpose of the code?
+The purpose of this code is to preprocess the Heart Failure Clinical Records Dataset for machine learning model training. The main goals are:
+
+##### Outlier detection and handling: 
+Outliers are identified and dealt with using methods like Box-Cox transformations and Winsorization to ensure data quality.
+##### Data transformation:
+Skewed features are transformed using Box-Cox to normalize them.
+##### Feature standardization: 
+Continuous features are standardized to have a mean of 0 and a standard deviation of 1, ensuring better model performance.
+##### Addressing class imbalance: 
+The Synthetic Minority Over-sampling Technique (SMOTE) is applied to balance the dataset by generating synthetic data for the minority class (```DEATH_EVENT = 1```).
+Data splitting: The dataset is split into training and test sets, with 80% used for training and 20% used for testing.
+
+#### 2. Which dataset is used?
+The code uses the Heart Failure Clinical Records Dataset, which contains clinical data about heart failure patients. The dataset includes features such as age, sex, blood pressure, serum levels, and medical conditions. The target variable is ```DEATH_EVENT```, which indicates whether the patient experienced a death event (1) or not (0) within a given timeframe.
+
+#### 3. What are the key steps of the preprocessing pipeline?
+##### Exploring the Data:
+The dataset is loaded using ```pandas.read_csv()``` and basic information about the dataset is explored (e.g., missing values, summary statistics).
+##### Visualizing Correlations:
+A heatmap of the correlation matrix is created to visualize relationships between numerical features.
+##### Detecting Outliers:
+Outliers in numerical features are detected using the Interquartile Range (IQR) method, which is followed by boxplots to visualize these outliers.
+##### Transforming Outliers:
+Box-Cox Transformation is applied to continuous features to reduce skewness and make distributions closer to normal.
+Winsorization is applied to the ```platelets``` feature, capping values at the 5th and 95th percentiles to mitigate the effect of extreme outliers.
+##### Standardizing Features:
+Continuous features are standardized using ```StandardScaler``` to ensure they have a mean of 0 and standard deviation of 1.
+##### Class Imbalance Handling with SMOTE:
+SMOTE (Synthetic Minority Over-sampling Technique) is applied to generate synthetic samples for the minority class (```DEATH_EVENT = 1```), thus addressing class imbalance.
+Splitting the Data:
+The dataset is split into training and test sets (80% training, 20% testing), and the features are separated from the target variable.
+
+#### 4. What does the transform_input_data function do?
+The ```transform_input_data``` function is designed to apply the same transformations to new input data that were applied to the training data. Specifically, it performs the following:
+
+Box-Cox Transformation: Applies the same Box-Cox transformation to continuous features, using precomputed lambda values from the training data.
+Winsorization: Caps extreme values in the ```platelets``` feature based on the original dataset's 5th and 95th percentiles.
+Standardization: Standardizes input data using the precomputed mean and standard deviation of the transformed training data to ensure consistency across datasets.
+This function allows the model to handle new data in the same manner as the training data, ensuring the model remains consistent when making predictions on unseen data.
+
+#### 5. Was the dataset balanced? If not, how did you handle imbalance? And what was the impact?
+The dataset was imbalanced, with a lower proportion of death events (```DEATH_EVENT = 1```). To address this issue, the SMOTE (Synthetic Minority Over-sampling Technique) was applied to generate synthetic samples for the minority class. This helped balance the dataset by increasing the number of instances of the minority class, improving the model’s ability to learn patterns related to both classes and preventing bias toward the majority class.
+
+Impact: The SMOTE application likely improved the model's ability to predict death events accurately, as the model was trained on a more balanced dataset.
+
+#### 6. Which ML model performed best? Provide performance metrics.
+The Random Forest Classifier was the most performant model. It showed the best accuracy and overall performance compared to other models. The Random Forest classifier is robust and performs well even when dealing with imbalanced data, as it can learn complex patterns and handle outliers effectively.
+
+Performance metrics:
+
+##### Accuracy: 
+High accuracy on both the training and test datasets, demonstrating good generalization.
+##### Precision, Recall, F1-Score:
+These metrics indicate that the model achieved a good balance between identifying both classes (```DEATH_EVENT = 1``` and ```DEATH_EVENT = 0```).
+
+#### 7. Which medical features most influenced predictions (SHAP results)?
+Based on the SHAP analysis, the following features had the most significant impact on the model’s predictions for DEATH_EVENT:
+
+##### Serum Creatinine: 
+This feature had the highest influence, contributing the most to the model’s decision-making process.
+##### Ejection Fraction: 
+The percentage of blood pumped out of the heart was the second most influential feature.
+##### Age: 
+The patient's age also played a significant role in the predictions, with older age contributing notably to the likelihood of a death event.
+##### Serum Sodium:
+This feature, which is indicative of fluid balance in the body, also played a substantial role in predicting death events.
+
+These rankings are based on the SHAP values, which quantify how much each feature contributes to the model's output.
+
+#### 8. What insights did prompt engineering provide for your selected task?
+Prompt engineering did not directly apply to the dataset or the machine learning model in this project, as the focus was on traditional data processing, preprocessing, and model training. However, in a broader context, prompt engineering can be used for tasks involving natural language processing or when interacting with models that require specific input formatting.
+
+In this project, the key insights came from the data exploration and feature engineering steps, which ensured that the data was clean, balanced, and properly transformed for model training. Additionally, the identification of key features that influence the target variable (```DEATH_EVENT```) through SHAP values provided valuable insights into which clinical measurements were most relevant for prediction.
 
