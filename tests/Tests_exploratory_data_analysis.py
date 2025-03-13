@@ -1,6 +1,9 @@
 import unittest
 import pandas as pd
 import os
+import pytest
+import numpy as np
+from Exlporatory_Data_Analysis.ipynb import detect_outliers_iqr
 
 class TestCSVLoading(unittest.TestCase):
     def setUp(self):
@@ -27,6 +30,38 @@ class TestCSVLoading(unittest.TestCase):
         }
         df = pd.read_csv(self.file_path)
         self.assertTrue(expected_columns.issubset(df.columns), "Les colonnes attendues ne sont pas toutes présentes.")
+
+def test_detect_outliers_iqr():
+    # Jeu de données sans valeurs aberrantes
+    data_normal = pd.DataFrame({
+        'A': [10, 12, 14, 11, 13, 15, 10],
+        'B': [100, 102, 101, 99, 98, 103, 100]
+    })
+    assert all(len(v) == 0 for v in detect_outliers_iqr(data_normal).values())
+    
+    # Jeu de données avec des valeurs aberrantes
+    data_outliers = pd.DataFrame({
+        'A': [10, 12, 14, 11, 130, 15, 10],  # 130 est un outlier
+        'B': [100, 102, 101, 99, 98, 300, 100]  # 300 est un outlier
+    })
+    outliers = detect_outliers_iqr(data_outliers)
+    assert 130 in outliers['A'].values
+    assert 300 in outliers['B'].values
+    
+    # Jeu de données avec une seule colonne
+    data_single_column = pd.DataFrame({'A': [1, 2, 3, 4, 100]})  # 100 est un outlier
+    outliers = detect_outliers_iqr(data_single_column)
+    assert 100 in outliers['A'].values
+    
+    # Jeu de données contenant des NaN
+    data_with_nan = pd.DataFrame({
+        'A': [10, 12, np.nan, 11, 130, 15, 10],
+        'B': [100, 102, 101, np.nan, 98, 300, 100]
+    })
+    outliers = detect_outliers_iqr(data_with_nan)
+    assert 130 in outliers['A'].values
+    assert 300 in outliers['B'].values
+
 
 if __name__ == "__main__":
     unittest.main()
