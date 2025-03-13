@@ -76,6 +76,7 @@ You can execute it by running:
 ```python main.py```
 Running with Jupyter Notebook
 If the project includes Jupyter Notebooks (with .ipynb files), you can also run them for an interactive experience. Here's how to do it:
+
 Install Jupyter Notebook (if it's not already installed) by running the following command:
 
 ```pip install notebook```
