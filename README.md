@@ -9,16 +9,14 @@
 - Implement a CI/CD pipeline with GitHub Actions for automated testing and deployment.
 - Apply prompt engineering techniques to enhance AI-driven workflows and documentation.
 ## Installation and Run Project 🌐📂 :
-If you would like to run or contribute to this project, follow the steps below to set it up on your local machine.
+If you would like to run this project, follow the steps below to set it up on your local machine.
 
-### Fork or Clone the Repository
-- Fork the repository: If you want to contribute to this project, you should fork it first. This will create a copy of the repository in your own GitHub account where you can make changes without affecting the original project.
+### Clone the Repository
 
 - Go to the project repository.
-- Click the Fork button at the top right of the page.
-- Clone the repository: After forking the repository (or if you just want to run it without contributing), clone it to your local machine. You can do this with the following steps:
+- Clone the repository: clone it to your local machine. You can do this with the following steps:
 
-- Navigate to the repository page (after forking or directly cloning).
+- Navigate to the repository page.
 
 - Copy the repository URL: https://github.com/username/Coding-week_gr7_PREDICTING-HEART-FAILURE-RISK-WITH-EXPLAINABLE-ML-SHAP.git (replace username with your GitHub username).
 
