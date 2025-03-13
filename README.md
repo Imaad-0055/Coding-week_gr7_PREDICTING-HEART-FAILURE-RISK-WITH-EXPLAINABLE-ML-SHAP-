@@ -74,6 +74,21 @@ Running the Python Script
 You can execute it by running:
 
 ```python main.py```
+Running with Jupyter Notebook
+If the project includes Jupyter Notebooks (with .ipynb files), you can also run them for an interactive experience. Here's how to do it:
+Install Jupyter Notebook (if it's not already installed) by running the following command:
+
+```pip install notebook```
+
+Start Jupyter Notebook by running the command:
+
+```jupyter notebook```
+
+This will open Jupyter Notebook in your browser. You should see the project files there. Click on the appropriate notebook file (e.g., ```heart_failure_analysis.ipynb```) to open it.
+
+Execute the cells in the notebook:
+
+You can run the notebook cells one by one by pressing ```Shift + Enter``` or using the Run button in the Jupyter interface.
 
 ### Troubleshooting
 If you encounter issues during the setup or execution of the project, here are a few steps to resolve common problems:
@@ -110,5 +125,8 @@ venv\Scripts\activate  # Windows
 
 ```python main.py```
 
+#### Run Jupyter Notebook:
+
+```jupyter notebook```
 
 
