@@ -196,6 +196,52 @@ Prompt engineering did not directly apply to the dataset or the machine learning
 
 In this project, the key insights came from the data exploration and feature engineering steps, which ensured that the data was clean, balanced, and properly transformed for model training. Additionally, the identification of key features that influence the target variable (```DEATH_EVENT```) through SHAP values provided valuable insights into which clinical measurements were most relevant for prediction.
 
+## Test of data_processing
+The purpose of this section is to optimize the memory usage of a dataset by downcasting numeric columns to more efficient data types. This process helps reduce memory consumption, especially when working with large datasets, making data processing more efficient.
+
+### Overview:
+#### Reading the Dataset:
+
+The dataset (```heart_failure_clinical_records_dataset.csv```) is read using pandas into a DataFrame.
+
+#### ```optimize_memory(df)``` Function:
+
+This function takes a pandas DataFrame as input and returns a memory-optimized version of the DataFrame.
+The function performs the following optimizations:
+##### Numeric Columns: 
+The function evaluates each numeric column's data type and, if applicable, downcasts it to the smallest suitable type (e.g., int64 to int32, float64 to float32).
+##### Object Columns: 
+For columns with object data types (usually strings), the function converts them to the category data type when the number of unique values is small relative to the total number of values, thereby reducing memory usage.
+
+### Memory Usage Calculation:
+
+The memory usage of the original DataFrame is measured before optimization and compared to the memory usage after the optimization to show the effectiveness of the process.
+
+### Optimization Process:
+
+For Integer Columns: The function checks the minimum and maximum values in each column and downcasts the integer data type to the smallest type that can hold the values (e.g., from ```int64``` to ```int32``` or ```int16```).
+For Float Columns: If the values fall within the range of ```float32```, the column is downcasted from ```float64``` to ```float32``` to reduce memory consumption.
+For Object Columns: The function calculates the ratio of unique values to total values in each column. If the ratio is small (less than 50%), the column is converted to the ```category``` data type, which is more memory-efficient for categorical data.
+
+### Memory Usage After Optimization:
+
+After applying the optimizations, the function measures the memory usage of the DataFrame again, showing how much memory was saved in percentage terms.
+#### Key Benefits:
+
+##### Memory Efficiency: 
+This function reduces memory consumption by optimizing the data types of the dataset’s columns.
+##### Handling Larger Datasets: 
+By minimizing memory usage, this function helps in working with larger datasets that might not fit into memory otherwise.
+##### Improved Performance:
+Reducing the memory footprint can lead to faster processing times when working with large DataFrames.
+
+#### Expected Outcomes:
+A reduction in memory usage, making it easier to handle large datasets efficiently.
+A DataFrame that uses the least amount of memory while maintaining the accuracy of the data.
+This memory optimization technique is particularly useful for datasets with large numeric and categorical columns, and it allows for better utilization of available system memory during data processing.
+
+This explanation outlines the purpose and benefits of the optimize_memory function in the context of memory optimization in data processing.
+
 ## Explanation of the Streamlit Interface
 
 <img src="media/Photo 1.png" width="1100">
