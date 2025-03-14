@@ -209,9 +209,9 @@ The dataset (```heart_failure_clinical_records_dataset.csv```) is read using pan
 This function takes a pandas DataFrame as input and returns a memory-optimized version of the DataFrame.
 The function performs the following optimizations:
 ##### Numeric Columns: 
-The function evaluates each numeric column's data type and, if applicable, downcasts it to the smallest suitable type (e.g., int64 to int32, float64 to float32).
+The function evaluates each numeric column's data type and, if applicable, downcasts it to the smallest suitable type (e.g., ```int64``` to ```int32```, ```float64``` to ```float32```).
 ##### Object Columns: 
-For columns with object data types (usually strings), the function converts them to the category data type when the number of unique values is small relative to the total number of values, thereby reducing memory usage.
+For columns with object data types (usually strings), the function converts them to the ```category``` data type when the number of unique values is small relative to the total number of values, thereby reducing memory usage.
 
 ### Memory Usage Calculation:
 
@@ -240,7 +240,7 @@ A reduction in memory usage, making it easier to handle large datasets efficient
 A DataFrame that uses the least amount of memory while maintaining the accuracy of the data.
 This memory optimization technique is particularly useful for datasets with large numeric and categorical columns, and it allows for better utilization of available system memory during data processing.
 
-This explanation outlines the purpose and benefits of the optimize_memory function in the context of memory optimization in data processing.
+This explanation outlines the purpose and benefits of the ```optimize_memory``` function in the context of memory optimization in data processing.
 
 ## Explanation of the Streamlit Interface
 
