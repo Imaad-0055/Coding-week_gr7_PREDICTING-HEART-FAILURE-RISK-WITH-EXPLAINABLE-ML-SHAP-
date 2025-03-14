@@ -335,6 +335,59 @@ The user can click a button to trigger the prediction. Once the "Predict Mortali
 
 <img src="media/Capture d'écran 2025-03-14 124734.png" width="1100">
   ---
+  
+## Step-by-Step Guide to Execute the Interface
+To successfully run the interface, follow these steps. You must have already installed the required packages beforehand and have access to the dataset from the provided Google Drive link.
+
+### 1. Install Requirements
+
+Before starting, ensure that the necessary libraries are installed. You can do this by running the following command in your terminal:
+
+```pip install -r requirements.txt```
+
+This command installs all the dependencies listed in the ```requirements.txt``` file.
+
+### 2. Download the Dataset
+
+You will need the dataset for this project. Download it from the provided Google Drive link:
+
+Google Drive Link: https://drive.google.com/drive/folders/13FnPhAoj5JJkwksqActUbvg_jtC1pKIx?usp=share_link
+
+Download the folder containing the dataset and related files.
+
+### 3. Adjust the Path in the Data File
+
+After downloading the dataset, you need to adjust the file path in the project files to point to the location where you saved the dataset on your computer.
+
+Locate the ```data``` file in the project directory.
+Open the file and modify the path to match the location on your computer. For example, if you downloaded the folder to ```C:\Users\YourName\Downloads\project_folder```, adjust the path accordingly.
+
+Make sure to insert the full path to the dataset location on your system.
+
+### 4. Open Command Prompt (Administrator Mode)
+
+For proper permissions and smoother operation, open the Command Prompt in Administrator Mode:
+
+Press the ```Windows key``` and search for "Command Prompt".
+Right-click on "Command Prompt" and select Run as Administrator.
+
+### 5. Run the Application
+
+Once the dataset is downloaded, the path is correctly set, and the requirements are installed, navigate to the project folder in your command prompt.
+
+Use the ```cd``` command to navigate to the folder containing your project and the ```app.py``` file:
+
+```cd path\to\your\project```
+
+Replace ```path\to\your\project``` with the actual path to your project folder.
+
+Run the Streamlit app with the following command:
+
+```streamlit run app.py```
+
+This will launch the interface and open it in your default web browser.
+
+You have now successfully set up and launched the interface. If you encounter any issues with file paths, ensure that the dataset path is correct and that all required libraries are installed as described in the requirements.txt file.
 
 ## Credits
 The authors of this project are:
