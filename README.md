@@ -209,3 +209,51 @@ Prompt engineering did not directly apply to the dataset or the machine learning
 
 In this project, the key insights came from the data exploration and feature engineering steps, which ensured that the data was clean, balanced, and properly transformed for model training. Additionally, the identification of key features that influence the target variable (```DEATH_EVENT```) through SHAP values provided valuable insights into which clinical measurements were most relevant for prediction.
 
+## Explanation of the Streamlit Interface
+This interactive web application, developed using Streamlit, allows users to input a patient's health data and predict their mortality risk using a machine learning model trained with Random Forest. Below is a detailed explanation of the different components of the interface:
+
+### Model Loading
+The application loads the pre-trained Random Forest model from a ```.joblib ``` file. This model is used to predict whether a patient is at risk of death based on their health characteristics.
+The application loads the pre-trained Random Forest model from a .joblib file. This model is used to predict whether a patient is at risk of death based on their health characteristics.
+
+### Interface Customization
+Custom styles are applied to the interface using CSS. This includes a stylish background with a gradient overlay, buttons with hover effects, neat input fields, and harmonious colors that make the interface pleasant to use.
+
+### Title and Layout
+The application displays a centered title, "Prediction of Death Event using Advanced Machine Learning Model," in a large font with a text-shadow effect, to grab the user's attention and make the interface more engaging. The title is followed by a section for entering patient data.
+
+### Data Loading
+The application loads a dataset (```heart_failure_clinical_records_dataset.csv```) containing information about patients in relation to death events. If the file is not found, an error message is displayed, and the app stops.
+
+### Data Input
+Users can enter various patient information, such as age, serum creatinine, ejection fraction, etc., through text fields, numeric input fields, and radio buttons. The input data is structured neatly in three columns for better readability.
+
+### Data Transformation
+Once the data is entered, it undergoes transformations using predefined preprocessing steps:
+
+#### Box-Cox transformation is applied to continuous features such as serum creatinine and serum sodium to normalize the data.
+#### Winsorization (clipping extreme values) is used for the platelets variable.
+#### Standardization of continuous variables to make them comparable (using the mean and standard deviation from the training dataset).
+
+### Prediction
+Once the data is transformed, the Random Forest model is used to make predictions. The model returns two results:
+
+The predicted class (1 for a death event, 0 for survival).
+The probabilities for both classes (death and survival).
+
+### Displaying Results
+Depending on the prediction, the application displays the results as the mortality risk probability and survival probability in percentage. A health status of the patient is also shown, indicating whether the patient is critical or stable. If the mortality risk is high, an error message appears; otherwise, a success message is shown, recommending regular monitoring of the patient.
+
+### Feature Importance
+The app also attempts to load and display an image explaining the importance of different features in predicting mortality risk. This helps users understand which factors have the greatest influence on the model’s decision.
+
+### Data Summary
+Finally, a summary table is displayed, showing the data entered by the user. This allows the user to review the input before making any decisions.
+
+### Final Interaction
+The user can click a button to trigger the prediction. Once the "Predict Mortality Risk" button is pressed, the application performs all the preceding steps, computes the prediction, and displays the results on the interface.
+
+In summary, this application allows users to input patient health data, transform this data using preprocessing criteria, and then predict the mortality risk of the patient using a machine learning model. The interface is interactive, visually appealing, and provides detailed information on the prediction along with insights into the impact of different features on the model's decision.
+
+
+
