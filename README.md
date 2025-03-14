@@ -198,7 +198,7 @@ In this project, the key insights came from the data exploration and feature eng
 
 ## Explanation of the Streamlit Interface
 
-<img src="media/Capture d’écran 2025-03-13 à 23.55.16.png" width="1100">
+<img src="media/Photo 1.png" width="1100">
    
 This interactive web application, developed using Streamlit, allows users to input a patient's health data and predict their mortality risk using a machine learning model trained with Random Forest. Below is a detailed explanation of the different components of the interface:
 
@@ -244,6 +244,9 @@ Finally, a summary table is displayed, showing the data entered by the user. Thi
 The user can click a button to trigger the prediction. Once the "Predict Mortality Risk" button is pressed, the application performs all the preceding steps, computes the prediction, and displays the results on the interface.
 
 In summary, this application allows users to input patient health data, transform this data using preprocessing criteria, and then predict the mortality risk of the patient using a machine learning model. The interface is interactive, visually appealing, and provides detailed information on the prediction along with insights into the impact of different features on the model's decision.
+
+<img src="media/Photo 2.png" width="1100">
+
 
   ---
 
