@@ -13,7 +13,7 @@ rf = joblib.load("/Users/m1/Desktop/CODING_WEEK/Random Forest.joblib")
 def apply_custom_styles():
     st.markdown(
         """
-        <style>
+        <style> 
         /* Premium background with overlay gradient */
         .stApp {
             background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(30, 41, 59, 0.92)),
