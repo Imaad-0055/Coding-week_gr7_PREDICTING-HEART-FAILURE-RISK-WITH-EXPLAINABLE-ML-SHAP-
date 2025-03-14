@@ -3,7 +3,7 @@ import pandas as pd
 import os
 import pytest
 import numpy as np
-from Exlporatory_Data_Analysis.ipynb import detect_outliers_iqr
+import Utils.Exploratory_data_Analysis
 
 class TestCSVLoading(unittest.TestCase):
     def setUp(self):
