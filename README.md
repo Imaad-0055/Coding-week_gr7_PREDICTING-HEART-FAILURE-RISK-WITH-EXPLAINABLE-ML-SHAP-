@@ -138,7 +138,7 @@ This repository provides a data preprocessing pipeline for the heart failure cli
 #### 1. What is the purpose of the code?
 The purpose of this code is to preprocess the Heart Failure Clinical Records Dataset for machine learning model training. The main goals are:
 
-##### Outlier detection and handling: 
+##### **Outlier detection and handling:**  
 Outliers are identified and dealt with using methods like Box-Cox transformations and Winsorization to ensure data quality.
 ##### Data transformation:
 Skewed features are transformed using Box-Cox to normalize them.
@@ -152,21 +152,14 @@ Data splitting: The dataset is split into training and test sets, with 80% used 
 The code uses the Heart Failure Clinical Records Dataset, which contains clinical data about heart failure patients. The dataset includes features such as age, sex, blood pressure, serum levels, and medical conditions. The target variable is ```DEATH_EVENT```, which indicates whether the patient experienced a death event (1) or not (0) within a given timeframe.
 
 #### 3. What are the key steps of the preprocessing pipeline?
-- Exploring the Data:    
-The dataset is loaded using ```pandas.read_csv()``` and basic information about the dataset is explored (e.g., missing values, summary statistics).
-- Visualizing Correlations:    
-A heatmap of the correlation matrix is created to visualize relationships between numerical features.
-- Detecting Outliers:    
-Outliers in numerical features are detected using the Interquartile Range (IQR) method, which is followed by boxplots to visualize these outliers.
-- Transforming Outliers:    
-Box-Cox Transformation is applied to continuous features to reduce skewness and make distributions closer to normal.
-Winsorization is applied to the ```platelets``` feature, capping values at the 5th and 95th percentiles to mitigate the effect of extreme outliers.
-- Standardizing Features:    
-Continuous features are standardized using ```StandardScaler``` to ensure they have a mean of 0 and standard deviation of 1.
-- Class Imbalance Handling with SMOTE:    
-SMOTE (Synthetic Minority Over-sampling Technique) is applied to generate synthetic samples for the minority class (```DEATH_EVENT = 1```), thus addressing class imbalance.
-- Splitting the Data:    
-The dataset is split into training and test sets (80% training, 20% testing), and the features are separated from the target variable.
+- **Exploring the Data:** The dataset is loaded using ```pandas.read_csv()``` and basic information about the dataset is explored (e.g., missing values, summary statistics).
+- **Visualizing Correlations:** A heatmap of the correlation matrix is created to visualize relationships between numerical features.
+- **Detecting Outliers:** Outliers in numerical features are detected using the Interquartile Range (IQR) method, which is followed by boxplots to visualize these outliers.
+- **Transforming Outliers:** Box-Cox Transformation is applied to continuous features to reduce skewness and make distributions closer to normal.
+  Winsorization is applied to the ```platelets``` feature, capping values at the 5th and 95th percentiles to mitigate the effect of extreme outliers.
+- **Standardizing Features:** Continuous features are standardized using ```StandardScaler``` to ensure they have a mean of 0 and standard deviation of 1.
+- **Class Imbalance Handling with SMOTE:** SMOTE (Synthetic Minority Over-sampling Technique) is applied to generate synthetic samples for the minority class (```DEATH_EVENT = 1```), thus addressing       class imbalance.
+- **Splitting the Data:** The dataset is split into training and test sets (80% training, 20% testing), and the features are separated from the target variable.
 
 #### 4. What does the transform_input_data function do?
 The ```transform_input_data``` function is designed to apply the same transformations to new input data that were applied to the training data. Specifically, it performs the following:
@@ -185,22 +178,16 @@ Impact: The SMOTE application likely improved the model's ability to predict dea
 The Random Forest Classifier was the most performant model. It showed the best accuracy and overall performance compared to other models. The Random Forest classifier is robust and performs well even when dealing with imbalanced data, as it can learn complex patterns and handle outliers effectively.
 
 ##### Performance metrics:
-- Accuracy:     
-High accuracy on both the training and test datasets, demonstrating good generalization.
-- Precision, Recall, F1-Score:    
-These metrics indicate that the model achieved a good balance between identifying both classes (```DEATH_EVENT = 1``` and ```DEATH_EVENT = 0```).
+- **Accuracy:**      High accuracy on both the training and test datasets, demonstrating good generalization.
+- **Precision, Recall, F1-Score:**   These metrics indicate that the model achieved a good balance between identifying both classes (```DEATH_EVENT = 1``` and ```DEATH_EVENT = 0```).
 
 #### 7. Which medical features most influenced predictions (SHAP results)?
 Based on the SHAP analysis, the following features had the most significant impact on the model’s predictions for DEATH_EVENT:
 
-- Serum Creatinine:      
-This feature had the highest influence, contributing the most to the model’s decision-making process.
-- Ejection Fraction:   
-The percentage of blood pumped out of the heart was the second most influential feature.
-- Age:   
-The patient's age also played a significant role in the predictions, with older age contributing notably to the likelihood of a death event.
-- Serum Sodium:  
-This feature, which is indicative of fluid balance in the body, also played a substantial role in predicting death events.
+- **Serum Creatinine:** This feature had the highest influence, contributing the most to the model’s decision-making process.
+- **Ejection Fraction:** The percentage of blood pumped out of the heart was the second most influential feature.
+- **Age:** The patient's age also played a significant role in the predictions, with older age contributing notably to the likelihood of a death event.
+- **Serum Sodium:**   This feature, which is indicative of fluid balance in the body, also played a substantial role in predicting death events.
 
 These rankings are based on the SHAP values, which quantify how much each feature contributes to the model's output.
 
@@ -211,7 +198,8 @@ In this project, the key insights came from the data exploration and feature eng
 
 ## Explanation of the Streamlit Interface
 
-![Interface Streamlit](media/Capture d’écran 2025-03-13 à 23.55.16.png)
+<img src="media/Capture d’écran 2025-03-13 à 23.55.16.png" width="1100">
+   
 This interactive web application, developed using Streamlit, allows users to input a patient's health data and predict their mortality risk using a machine learning model trained with Random Forest. Below is a detailed explanation of the different components of the interface:
 
 ### Model Loading
@@ -257,12 +245,14 @@ The user can click a button to trigger the prediction. Once the "Predict Mortali
 
 In summary, this application allows users to input patient health data, transform this data using preprocessing criteria, and then predict the mortality risk of the patient using a machine learning model. The interface is interactive, visually appealing, and provides detailed information on the prediction along with insights into the impact of different features on the model's decision.
 
-## Project Authors
+  ---
+
+## Credits
 The authors of this project are:
 
 #### Ammour Adam
 #### Assouabi Imad
-#### Desmoulins lucien
+#### Desmoulins Lucien
 #### Ouamalich Aasmaa
 #### Tahri Abdelouahed 
 
