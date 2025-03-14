@@ -236,9 +236,13 @@ Before performing any optimizations, the function measures the memory usage of t
 The function reports the memory usage of the DataFrame before and after the optimization. This allows you to see how much memory was saved as a result of the optimizations. The difference is presented as a percentage reduction in memory usage, helping to demonstrate the effectiveness of the function.
 
 #### Example Output:  
-**Memory usage before optimization:** 50.00 MB  
-**Memory usage after optimization:** 11.70 MB  
-**Memory reduced by:** 76.60%
+**Memory usage before optimization:**   50.00 MB  
+**Memory usage after optimization:**  11.70 MB  
+**Memory reduced by:**   76.60%
+
+<p align="center">
+  <img src="Memory_opt.png" width="500">
+</p>
 
 ### Expected Outcomes
 By applying the ```optimize_memory``` function, you can expect:
