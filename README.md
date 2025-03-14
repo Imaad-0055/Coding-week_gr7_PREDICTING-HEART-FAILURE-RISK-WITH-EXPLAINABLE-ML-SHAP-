@@ -155,14 +155,11 @@ Data splitting: The dataset is split into training and test sets, with 80% used 
 The code uses the Heart Failure Clinical Records Dataset, which contains clinical data about heart failure patients. The dataset includes features such as age, sex, blood pressure, serum levels, and medical conditions. The target variable is ```DEATH_EVENT```, which indicates whether the patient experienced a death event (1) or not (0) within a given timeframe.
 
 #### 3. What are the key steps of the preprocessing pipeline?
-- **Exploring the Data:** The dataset is loaded using ```pandas.read_csv()``` and basic information about the dataset is explored (e.g., missing values, summary statistics).
-- **Visualizing Correlations:** A heatmap of the correlation matrix is created to visualize relationships between numerical features.
-- **Detecting Outliers:** Outliers in numerical features are detected using the Interquartile Range (IQR) method, which is followed by boxplots to visualize these outliers.
-- **Transforming Outliers:** Box-Cox Transformation is applied to continuous features to reduce skewness and make distributions closer to normal.
-  Winsorization is applied to the ```platelets``` feature, capping values at the 5th and 95th percentiles to mitigate the effect of extreme outliers.
-- **Standardizing Features:** Continuous features are standardized using ```StandardScaler``` to ensure they have a mean of 0 and standard deviation of 1.
-- **Class Imbalance Handling with SMOTE:** SMOTE (Synthetic Minority Over-sampling Technique) is applied to generate synthetic samples for the minority class (```DEATH_EVENT = 1```), thus addressing       class imbalance.
-- **Splitting the Data:** The dataset is split into training and test sets (80% training, 20% testing), and the features are separated from the target variable.
+
+<p align="center">
+  <img src="media/data_preprocessing_pipeline (1).png" width="370">
+</p>
+
 
 #### 4. What does the transform_input_data function do?
 The ```transform_input_data``` function is designed to apply the same transformations to new input data that were applied to the training data. Specifically, it performs the following:
@@ -191,6 +188,11 @@ Based on the SHAP analysis, the following features had the most significant impa
 - **Ejection Fraction:** The percentage of blood pumped out of the heart was the second most influential feature.
 - **Age:** The patient's age also played a significant role in the predictions, with older age contributing notably to the likelihood of a death event.
 - **Serum Sodium:**   This feature, which is indicative of fluid balance in the body, also played a substantial role in predicting death events.
+
+<p align="center">
+  <img src="media/Random_Forest_SHAP.jpg" width="700">
+</p>
+
 
 These rankings are based on the SHAP values, which quantify how much each feature contributes to the model's output.
 
