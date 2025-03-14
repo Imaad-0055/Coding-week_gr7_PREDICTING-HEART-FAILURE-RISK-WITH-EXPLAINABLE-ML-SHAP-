@@ -333,6 +333,7 @@ The user can click a button to trigger the prediction. Once the "Predict Mortali
 <img src="media/Predict.jpg" width="1100">
 
 
+<img src="media/Capture d'écran 2025-03-14 124734.png" width="1100">
   ---
 
 ## Credits
