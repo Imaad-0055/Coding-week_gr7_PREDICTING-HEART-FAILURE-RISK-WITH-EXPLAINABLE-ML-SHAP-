@@ -7,7 +7,7 @@ from sklearn.ensemble import RandomForestClassifier
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Reading the dataset
+# Reading the dataset 
 df = pd.read_csv('heart_failure_clinical_records_dataset.csv')
 df.info()  # Display information about the dataset
 
