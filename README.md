@@ -330,7 +330,7 @@ Finally, a summary table is displayed, showing the data entered by the user. Thi
 ### Final Interaction
 The user can click a button to trigger the prediction. Once the "Predict Mortality Risk" button is pressed, the application performs all the preceding steps, computes the prediction, and displays the results on the interface.
 
-<img src="media/Photo 2.png" width="1100">
+<img src="media/Predict.jpg" width="1100">
 
 
   ---
