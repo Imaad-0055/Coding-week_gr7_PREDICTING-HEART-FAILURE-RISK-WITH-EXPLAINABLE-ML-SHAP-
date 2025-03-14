@@ -2,7 +2,7 @@ import pytest
 import pandas as pd
 import numpy as np
 from scipy.stats import boxcox
-from your_module import transform_input_data  # Remplacez 'your_module' par le nom de votre module
+from Feature_Engineering import transform_input_data
 
 def test_transform_input_data():
     # Données fictives avant transformation
