@@ -281,7 +281,7 @@ He detailed how the function calculates and prints the memory usage before and a
 ##### Response:
 He reassured you that the optimization function maintains the accuracy and integrity of the data. By downcasting to smaller types, it selects the most appropriate data type for each column, ensuring no loss of information. This is especially critical for numeric data, where precision is maintained.
 
-    ---
+  ---
 
 ## Explanation of the Streamlit Interface
 
