@@ -210,6 +210,8 @@ Prompt engineering did not directly apply to the dataset or the machine learning
 In this project, the key insights came from the data exploration and feature engineering steps, which ensured that the data was clean, balanced, and properly transformed for model training. Additionally, the identification of key features that influence the target variable (```DEATH_EVENT```) through SHAP values provided valuable insights into which clinical measurements were most relevant for prediction.
 
 ## Explanation of the Streamlit Interface
+
+![Interface Streamlit](media/Capture d’écran 2025-03-13 à 23.55.16.png)
 This interactive web application, developed using Streamlit, allows users to input a patient's health data and predict their mortality risk using a machine learning model trained with Random Forest. Below is a detailed explanation of the different components of the interface:
 
 ### Model Loading
