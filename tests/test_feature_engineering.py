@@ -2,7 +2,10 @@ import pytest
 import pandas as pd
 import numpy as np
 from scipy.stats import boxcox
-from Feature_Engineering import transform_input_data
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', "Notebooks")))
+import Feature_Engineering.py
 
 def test_transform_input_data():
     # Données fictives avant transformation
