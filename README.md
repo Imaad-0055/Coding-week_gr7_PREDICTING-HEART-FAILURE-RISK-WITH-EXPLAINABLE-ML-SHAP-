@@ -91,6 +91,9 @@ Execute the cells in the notebook:
 
 You can run the notebook cells one by one by pressing ```Shift + Enter``` or using the Run button in the Jupyter interface.
 
+#### Note: 
+When using this program, you should adapt it to your system, especially the file paths, when downloading or accessing the datasets. Make sure to modify the paths for the files (such as ```heart_failure_clinical_records_dataset.csv```, ```X_train_resampled.csv```, etc.) to match the location on your machine where the files are stored.
+
 ### Troubleshooting
 If you encounter issues during the setup or execution of the project, here are a few steps to resolve common problems:
 
