@@ -5,7 +5,7 @@ from scipy.stats import boxcox
 import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', "Notebooks")))
-import Feature_Engineering.ipynb
+import Feature_Engineering
 
 def test_transform_input_data():
     # Données fictives avant transformation
