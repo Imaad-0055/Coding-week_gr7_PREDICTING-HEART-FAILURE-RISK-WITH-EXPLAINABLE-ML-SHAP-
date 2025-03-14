@@ -255,5 +255,13 @@ The user can click a button to trigger the prediction. Once the "Predict Mortali
 
 In summary, this application allows users to input patient health data, transform this data using preprocessing criteria, and then predict the mortality risk of the patient using a machine learning model. The interface is interactive, visually appealing, and provides detailed information on the prediction along with insights into the impact of different features on the model's decision.
 
+## Project Authors
+The authors of this project are:
+
+#### Ammour Adam
+#### Assouabi Imad
+#### Desmoulins lucien
+#### Ouamalich Aasmaa
+#### Tahri Abdelouahed 
 
 
