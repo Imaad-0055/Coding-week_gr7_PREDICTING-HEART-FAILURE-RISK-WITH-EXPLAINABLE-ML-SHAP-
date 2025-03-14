@@ -3,7 +3,7 @@ import pandas as pd
 import os
 import pytest
 import numpy as np
-import Utils.Exploratory_data_Analysis
+import Exploratory_data_Analysis
 
 class TestCSVLoading(unittest.TestCase):
     def setUp(self):
