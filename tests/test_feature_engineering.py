@@ -4,7 +4,7 @@ import numpy as np
 from scipy.stats import boxcox
 import nbimporter
 import nbformat
-import Notebooks.Feature_Engineering
+from Notebooks import Feature_Engineering
 
 def test_transform_input_data():
     # Données fictives avant transformation
