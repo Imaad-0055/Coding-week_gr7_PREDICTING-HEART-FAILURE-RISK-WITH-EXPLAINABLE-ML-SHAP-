@@ -10,4 +10,4 @@ lightgbm==3.3.5
 seaborn==0.12.2
 nbimporter==0.3.4
 nbformat==5.10.4
-ipython==8.31.0
+ipython==8.17.0
