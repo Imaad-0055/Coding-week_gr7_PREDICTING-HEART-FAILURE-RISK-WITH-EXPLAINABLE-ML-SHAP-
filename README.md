@@ -332,7 +332,7 @@ This command installs all the dependencies listed in the ```requirements.txt``` 
 
 You will need the dataset for this project. Download it from the provided Google Drive link:
 
-Google Drive Link: https://drive.google.com/drive/folders/13FnPhAoj5JJkwksqActUbvg_jtC1pKIx?usp=share_link
+Google Drive Link: https://drive.google.com/drive/folders/10LVkH0hwmjXswenwTaIOYrDEy8AfOO6_?usp=sharing
 
 Download the folder containing the dataset and related files.
 
