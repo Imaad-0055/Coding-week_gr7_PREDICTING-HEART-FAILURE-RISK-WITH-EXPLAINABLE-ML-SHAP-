@@ -264,7 +264,7 @@ He reassured you that the optimization function maintains the accuracy and integ
 
   ---
 
-## Explanation of the Streamlit Interface
+## Explanation of the Streamlit basic Interface
 
 <img src="media/Photo 1.png" width="1100">
    
@@ -316,8 +316,146 @@ The user can click a button to trigger the prediction. Once the "Predict Mortali
 
 <img src="media/Capture d'écran 2025-03-14 124734.png" width="1100">
   ---
-  
-## Step-by-Step Guide to Execute the Interface
+
+
+## Heart Failure Risk Prediction Web App: highly upgraded app
+
+This application is designed to help healthcare professionals predict the risk of mortality in patients with heart failure. By inputting clinical data such as age, ejection fraction, serum creatinine, and more, users can predict the risk of mortality for a specific patient, analyze trends over time, and track patient history.
+
+### Features Overview
+
+#### Risk Assessment:
+Predict the mortality risk of a patient based on clinical parameters.
+#### Trend Analysis: 
+Visualize how the patient's mortality risk has changed over time.
+#### Patient History: 
+Review and manage a patient's historical data and risk predictions.
+
+### Key Functionalities
+1. Risk Assessment:
+   
+##### Input Patient Data:
+Users can enter a unique Patient ID to load the patient’s clinical data. If no data is found, a warning will appear.
+##### Health Data Inputs: 
+The system provides multiple fields for clinical parameters like age, creatinine phosphokinase levels, ejection fraction, platelets, serum sodium, and other related health indicators.
+##### Risk Prediction:
+Once the input data is entered, users can click the "Predict Risk" button to get the patient's mortality risk based on a predictive model (currently using Random Forest).
+##### Save Data: 
+After entering or predicting, users can save the data and prediction results using the "Save Patient Data" button.
+##### Generate Reports: 
+After predictions, a clinical report can be generated and downloaded as a PDF for offline use.
+
+2. Trend Analysis
+
+##### Visualization: 
+If the patient has multiple records, this section shows a line graph displaying how the risk has evolved over time.
+##### Key Health Indicators:
+Displays the changes in important clinical indicators (like ejection fraction, serum creatinine, serum sodium) over time.
+##### Risk Metrics: 
+Displays the current risk and provides details on risk changes since the last recorded data.
+
+3. Patient History
+
+##### View History: 
+View the history of a specific patient, including previous predictions, model used, risk percentage, and other input data.
+##### Expandable Data:
+Each patient record includes an expandable section where detailed input data for the record can be viewed in tabular form.
+
+### Sidebar Features
+
+The sidebar contains helpful links and guides for healthcare professionals:
+
+##### Clinical Guidelines: 
+Key information on important risk factors related to heart failure.
+##### Interpretation Guide:
+Helps doctors interpret risk levels (e.g., High Risk, Moderate Risk, Low Risk).
+##### About the Model:
+Information on the machine learning model used, including the features, accuracy, and the current model in use.
+
+### Saving Patient Data
+
+In addition to making predictions, users can save a patient's data, including the prediction and its associated risk levels. The Save Patient Data button allows the user to:
+
+Save the entered clinical data, even if no prediction has been made.
+If a prediction has been made, save the prediction results along with the associated mortality risk and survival probabilities.
+Files are saved to a local directory and can be accessed later.
+
+#### Save Data Logic
+
+##### Patient ID: 
+Must be entered for the data to be saved.
+##### Prediction Information:
+If a prediction has been made, the predicted risk values will be saved. If not, default values (e.g., 100% survival, 0% mortality) will be used.
+
+The data is saved in a file format that can be later retrieved for historical tracking.
+
+### Model Features:
+##### Random Forest Model:
+The current version of the application uses the Random Forest algorithm for risk prediction.
+##### Accuracy:
+The model’s accuracy is approximately 85% based on validation data.
+##### Input Features: 
+The model uses 11 clinical parameters to generate predictions.
+
+### Error Handling
+
+If any issues arise while loading data, predicting risk, or saving data, error messages will be displayed to inform the user of the issue.
+
+### App Flow
+
+1. Risk Assessment Tab
+This tab allows users to input a patient's data and make a prediction regarding their heart failure risk:
+
+Patient ID: Input field for entering the unique identifier of the patient.
+Data Input: Various sliders and inputs for clinical data (e.g., age, serum sodium, ejection fraction, etc.).
+Buttons:
+Predict Risk: Predicts the risk based on the data entered.
+Save Patient Data: Saves the entered data along with the prediction to a file.
+Generate Report: Generates and allows the user to download a PDF report summarizing the patient’s information and prediction.
+
+2. Trend Analysis Tab
+This tab displays how a patient’s risk of mortality has changed over time:
+
+Risk Trend: Line chart displaying risk over time.
+Key Metrics: Displays changes in key clinical data (e.g., ejection fraction, serum creatinine).
+Risk Change: Shows the change in mortality risk between the most recent and previous data points.
+
+3. Patient History Tab
+View and manage the patient's past records:
+
+Displays a list of previous patient records, including the prediction status and risk values.
+Expanding a record shows detailed input data in tabular form.
+
+### Instructions
+
+#### 1. Loading Patient Data
+To load a patient's data, simply enter the Patient ID and click "📂 Load Patient Data". If the data exists, it will be loaded automatically.
+
+#### 2. Making a Prediction
+After loading a patient’s data, input the clinical parameters and click "🔍 Predict Risk". The model will predict the mortality risk, and a gauge will be shown to represent the risk level visually.
+
+#### 3. Saving Data
+If you want to save a patient’s data (whether or not a prediction was made), click the "💾 Save Patient Data" button. If no prediction was made, the system will default to 100% survival and 0% mortality.
+
+#### 4. Generating a Report
+After a prediction is made, the "📄 Generate Report" button will create a PDF report summarizing the patient’s data, prediction results, and recommendations. The report can then be downloaded directly.
+
+### Technologies Used
+
+Streamlit: For creating the interactive web app.
+Plotly: For creating interactive visualizations such as the risk trend chart.
+Random Forest: Used for making the mortality risk predictions based on clinical data.
+Pandas: For handling data storage, processing, and manipulation.
+Python: The core programming language behind the app.
+
+### Future Improvements
+
+Integration of additional machine learning models for risk prediction.
+More comprehensive history tracking with deeper trend analysis.
+Enhanced clinical decision support features based on prediction results.
+Secure user authentication and patient data management.
+
+## Step-by-Step Guide to Execute the  basic Interface and the upgraded one
 To successfully run the interface, follow these steps. You must have already installed the required packages beforehand and have access to the dataset from the provided Google Drive link.
 
 ### 1. Install Requirements
@@ -332,18 +470,33 @@ This command installs all the dependencies listed in the ```requirements.txt``` 
 
 You will need the dataset for this project. Download it from the provided Google Drive link:
 
-Google Drive Link: https://drive.google.com/drive/folders/10LVkH0hwmjXswenwTaIOYrDEy8AfOO6_?usp=sharing
+Google Drive Link for basic interface: https://drive.google.com/drive/folders/13FnPhAoj5JJkwksqActUbvg_jtC1pKIx?usp=share_link
+
+Google Drive Link for upgraded interface: https://drive.google.com/drive/folders/10LVkH0hwmjXswenwTaIOYrDEy8AfOO6_?usp=sharing
 
 Download the folder containing the dataset and related files.
 
 ### 3. Adjust the Path in the Data File
 
+#### For basic app
 After downloading the dataset, you need to adjust the file path in the project files to point to the location where you saved the dataset on your computer.
 
-Locate the ```data``` file in the project directory.
+Locate the ```data``` file in the project directory ```app.py```.
 Open the file and modify the path to match the location on your computer. For example, if you downloaded the folder to ```C:\Users\YourName\Downloads\project_folder```, adjust the path accordingly.
 
 Make sure to insert the full path to the dataset location on your system.
+
+#### For upgraded app
+you need to update three paths in your ```app_v2.1.py``` file:
+
+Path for Random Forest Model (line 34):
+You need to update the path to the ```random_forest_model.joblib``` file to point to the location of the model on your machine. Ensure that the model is accessible from this location.
+
+Path for Feature Importance PNG Image (line 1218):
+The application generates a PNG image representing the feature importance of the model. You need to update the path to this PNG file so that it displays correctly in the app.
+
+Path for Patient Data (line 451):
+You also need to update the path for the file containing patient data. This ensures that the application can load and display the patient information correctly.
 
 ### 4. Open Command Prompt (Administrator Mode)
 
@@ -362,9 +515,15 @@ Use the ```cd``` command to navigate to the folder containing your project and t
 
 Replace ```path\to\your\project``` with the actual path to your project folder.
 
-Run the Streamlit app with the following command:
+Run the Streamlit app with the following command
+
+#### For basic app
 
 ```streamlit run app.py```
+
+#### For upgraded app
+
+```streamlit run app_v2.1.py```
 
 This will launch the interface and open it in your default web browser.
 
