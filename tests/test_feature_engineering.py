@@ -4,11 +4,7 @@ import numpy as np
 from scipy.stats import boxcox
 import nbimporter
 import nbformat
-import sys
-import os
-notebook_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'notebook'))
-sys.path.append(notebook_path)
-from Notebooks import Feature_Engineering
+import Feature_Engineering
 
 def test_transform_input_data():
     # Données fictives avant transformation
