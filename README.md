@@ -318,7 +318,7 @@ The user can click a button to trigger the prediction. Once the "Predict Mortali
   ---
 
 
-## Heart Failure Risk Prediction Web App: highly upgraded app
+## Heart Failure Risk Prediction Web App: advanced app
 
 This application is designed to help healthcare professionals predict the risk of mortality in patients with heart failure. By inputting clinical data such as age, ejection fraction, serum creatinine, and more, users can predict the risk of mortality for a specific patient, analyze trends over time, and track patient history.
 
@@ -486,7 +486,7 @@ Open the file and modify the path to match the location on your computer. For ex
 
 Make sure to insert the full path to the dataset location on your system.
 
-#### For upgraded app
+#### For advanced app
 you need to update three paths in your ```app_v2.1.py``` file:
 
 Path for Random Forest Model (line 34):
@@ -521,7 +521,7 @@ Run the Streamlit app with the following command
 
 ```streamlit run app.py```
 
-#### For upgraded app
+#### For advanced app
 
 ```streamlit run app_v2.1.py```
 
