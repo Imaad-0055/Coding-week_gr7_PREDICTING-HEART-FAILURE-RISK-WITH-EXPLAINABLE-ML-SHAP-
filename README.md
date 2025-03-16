@@ -264,61 +264,9 @@ He reassured you that the optimization function maintains the accuracy and integ
 
   ---
 
-## Explanation of the Streamlit basic Interface
+## Explanation of the Streamlit basic Interface: Heart Failure Risk Prediction Web App
 
 <img src="media/Photo 1.png" width="1100">
-   
-This interactive web application, developed using Streamlit, allows users to input a patient's health data and predict their mortality risk using a machine learning model trained with Random Forest. Below is a detailed explanation of the different components of the interface:
-
-### Model Loading
-The application loads the pre-trained Random Forest model from a ```.joblib ``` file. This model is used to predict whether a patient is at risk of death based on their health characteristics.
-The application loads the pre-trained Random Forest model from a .joblib file. This model is used to predict whether a patient is at risk of death based on their health characteristics.
-
-### Interface Customization
-Custom styles are applied to the interface using CSS. This includes a stylish background with a gradient overlay, buttons with hover effects, neat input fields, and harmonious colors that make the interface pleasant to use.
-
-### Title and Layout
-The application displays a centered title, "Prediction of Death Event using Advanced Machine Learning Model," in a large font with a text-shadow effect, to grab the user's attention and make the interface more engaging. The title is followed by a section for entering patient data.
-
-### Data Loading
-The application loads a dataset (```heart_failure_clinical_records_dataset.csv```) containing information about patients in relation to death events. If the file is not found, an error message is displayed, and the app stops.
-
-### Data Input
-Users can enter various patient information, such as age, serum creatinine, ejection fraction, etc., through text fields, numeric input fields, and radio buttons. The input data is structured neatly in three columns for better readability.
-
-### Data Transformation
-Once the data is entered, it undergoes transformations using predefined preprocessing steps:
-
-#### Box-Cox transformation is applied to continuous features such as serum creatinine and serum sodium to normalize the data.
-#### Winsorization (clipping extreme values) is used for the platelets variable.
-#### Standardization of continuous variables to make them comparable (using the mean and standard deviation from the training dataset).
-
-### Prediction
-Once the data is transformed, the Random Forest model is used to make predictions. The model returns two results:
-
-The predicted class (1 for a death event, 0 for survival).
-The probabilities for both classes (death and survival).
-
-### Displaying Results
-Depending on the prediction, the application displays the results as the mortality risk probability and survival probability in percentage. A health status of the patient is also shown, indicating whether the patient is critical or stable. If the mortality risk is high, an error message appears; otherwise, a success message is shown, recommending regular monitoring of the patient.
-
-### Feature Importance
-The app also attempts to load and display an image explaining the importance of different features in predicting mortality risk. This helps users understand which factors have the greatest influence on the model’s decision.
-
-### Data Summary
-Finally, a summary table is displayed, showing the data entered by the user. This allows the user to review the input before making any decisions.
-
-### Final Interaction
-The user can click a button to trigger the prediction. Once the "Predict Mortality Risk" button is pressed, the application performs all the preceding steps, computes the prediction, and displays the results on the interface.
-
-<img src="media/Predict.jpg" width="1100">
-
-
-<img src="media/Capture d'écran 2025-03-14 124734.png" width="1100">
-  ---
-
-
-## Heart Failure Risk Prediction Web App: advanced app
 
 This application is designed to help healthcare professionals predict the risk of mortality in patients with heart failure. By inputting clinical data such as age, ejection fraction, serum creatinine, and more, users can predict the risk of mortality for a specific patient, analyze trends over time, and track patient history.
 
@@ -455,6 +403,13 @@ More comprehensive history tracking with deeper trend analysis.
 Enhanced clinical decision support features based on prediction results.
 Secure user authentication and patient data management.
 
+   ---
+<img src="media/Predict.jpg" width="1100">
+
+
+<img src="media/Capture d'écran 2025-03-14 124734.png" width="1100">
+  ---
+
 ## Step-by-Step Guide to Execute the  basic Interface and the upgraded one
 To successfully run the interface, follow these steps. You must have already installed the required packages beforehand and have access to the dataset from the provided Google Drive link.
 
@@ -478,16 +433,7 @@ Download the folder containing the dataset and related files.
 
 ### 3. Adjust the Path in the Data File
 
-#### For basic app
-After downloading the dataset, you need to adjust the file path in the project files to point to the location where you saved the dataset on your computer.
-
-Locate the ```data``` file in the project directory ```app.py```.
-Open the file and modify the path to match the location on your computer. For example, if you downloaded the folder to ```C:\Users\YourName\Downloads\project_folder```, adjust the path accordingly.
-
-Make sure to insert the full path to the dataset location on your system.
-
-#### For advanced app
-you need to update three paths in your ```app_v2.1.py``` file:
+After downloading the dataset, you need to update three paths in your ```app_v2.1.py``` file:
 
 Path for Random Forest Model (line 34):
 You need to update the path to the ```random_forest_model.joblib``` file to point to the location of the model on your machine. Ensure that the model is accessible from this location.
@@ -517,17 +463,13 @@ Replace ```path\to\your\project``` with the actual path to your project folder.
 
 Run the Streamlit app with the following command
 
-#### For basic app
-
-```streamlit run app.py```
-
-#### For advanced app
-
 ```streamlit run app_v2.1.py```
 
 This will launch the interface and open it in your default web browser.
 
 You have now successfully set up and launched the interface. If you encounter any issues with file paths, ensure that the dataset path is correct and that all required libraries are installed as described in the requirements.txt file.
+
+  ---
 
 ## Credits
 The authors of this project are:
