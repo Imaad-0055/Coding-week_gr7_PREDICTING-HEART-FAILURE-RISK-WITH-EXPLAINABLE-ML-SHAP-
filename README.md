@@ -266,7 +266,7 @@ He reassured you that the optimization function maintains the accuracy and integ
 
 ## Explanation of the Streamlit basic Interface: Heart Failure Risk Prediction Web App
 
-<img src="media/Photo 1.png" width="1100">
+<img src="media/interface 1.jpg" width="900">
 
 This application is designed to help healthcare professionals predict the risk of mortality in patients with heart failure. By inputting clinical data such as age, ejection fraction, serum creatinine, and more, users can predict the risk of mortality for a specific patient, analyze trends over time, and track patient history.
 
@@ -293,6 +293,9 @@ After entering or predicting, users can save the data and prediction results usi
 ##### Generate Reports: 
 After predictions, a clinical report can be generated and downloaded as a PDF for offline use.
 
+<img src="media/prediction results.jpg" width="800">
+
+
 2. Trend Analysis
 
 ##### Visualization: 
@@ -302,12 +305,16 @@ Displays the changes in important clinical indicators (like ejection fraction, s
 ##### Risk Metrics: 
 Displays the current risk and provides details on risk changes since the last recorded data.
 
+<img src="media/changes.png" width="900">
+
 3. Patient History
 
 ##### View History: 
 View the history of a specific patient, including previous predictions, model used, risk percentage, and other input data.
 ##### Expandable Data:
 Each patient record includes an expandable section where detailed input data for the record can be viewed in tabular form.
+
+<img src="media/History.png" width="900">
 
 ### Sidebar Features
 
@@ -345,35 +352,6 @@ The model’s accuracy is approximately 85% based on validation data.
 ##### Input Features: 
 The model uses 11 clinical parameters to generate predictions.
 
-### Error Handling
-
-If any issues arise while loading data, predicting risk, or saving data, error messages will be displayed to inform the user of the issue.
-
-### App Flow
-
-1. Risk Assessment Tab
-This tab allows users to input a patient's data and make a prediction regarding their heart failure risk:
-
-Patient ID: Input field for entering the unique identifier of the patient.
-Data Input: Various sliders and inputs for clinical data (e.g., age, serum sodium, ejection fraction, etc.).
-Buttons:
-Predict Risk: Predicts the risk based on the data entered.
-Save Patient Data: Saves the entered data along with the prediction to a file.
-Generate Report: Generates and allows the user to download a PDF report summarizing the patient’s information and prediction.
-
-2. Trend Analysis Tab
-This tab displays how a patient’s risk of mortality has changed over time:
-
-Risk Trend: Line chart displaying risk over time.
-Key Metrics: Displays changes in key clinical data (e.g., ejection fraction, serum creatinine).
-Risk Change: Shows the change in mortality risk between the most recent and previous data points.
-
-3. Patient History Tab
-View and manage the patient's past records:
-
-Displays a list of previous patient records, including the prediction status and risk values.
-Expanding a record shows detailed input data in tabular form.
-
 ### Instructions
 
 #### 1. Loading Patient Data
@@ -388,26 +366,11 @@ If you want to save a patient’s data (whether or not a prediction was made), c
 #### 4. Generating a Report
 After a prediction is made, the "📄 Generate Report" button will create a PDF report summarizing the patient’s data, prediction results, and recommendations. The report can then be downloaded directly.
 
-### Technologies Used
-
-Streamlit: For creating the interactive web app.
-Plotly: For creating interactive visualizations such as the risk trend chart.
-Random Forest: Used for making the mortality risk predictions based on clinical data.
-Pandas: For handling data storage, processing, and manipulation.
-Python: The core programming language behind the app.
-
-### Future Improvements
-
-Integration of additional machine learning models for risk prediction.
-More comprehensive history tracking with deeper trend analysis.
-Enhanced clinical decision support features based on prediction results.
-Secure user authentication and patient data management.
-
-   ---
-<img src="media/Predict.jpg" width="1100">
+<img src="media/Capture d'écran 2025-03-16 172653.png" width="900">
 
 
-<img src="media/Capture d'écran 2025-03-14 124734.png" width="1100">
+<img src="media/Capture d'écran 2025-03-14 124734.png" width="900">
+
   ---
 
 ## Step-by-Step Guide to Execute the  basic Interface and the upgraded one
