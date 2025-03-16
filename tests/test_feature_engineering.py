@@ -8,7 +8,7 @@ import sys
 import os
 notebook_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'notebook'))
 sys.path.append(notebook_path)
-import Feature_Engineering
+from Notebooks import Feature_Engineering
 
 def test_transform_input_data():
     # Données fictives avant transformation
