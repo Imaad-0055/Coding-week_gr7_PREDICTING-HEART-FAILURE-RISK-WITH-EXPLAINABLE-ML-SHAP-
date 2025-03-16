@@ -6,7 +6,8 @@ import nbimporter
 import nbformat
 import sys
 import os
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "Notebooks")))
+notebook_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'notebook'))
+sys.path.append(notebook_path)
 import Feature_Engineering
 
 def test_transform_input_data():
