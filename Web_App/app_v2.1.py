@@ -427,6 +427,60 @@ st.markdown("""
 }
 </style>
 """, unsafe_allow_html=True)
+# improving the download button
+st.markdown("""
+<style>
+/* Button styling with moderate blue text (including download button) */
+.stButton > button, .stDownloadButton > button {
+    background-color: rgba(30, 41, 59, 0.8);
+    color: #7dd3fc;
+    border: 1px solid #7dd3fc;
+    border-radius: 6px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Button hover effect */
+.stButton > button:hover, .stDownloadButton > button:hover {
+    background-color: rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 12px rgba(125, 211, 252, 0.6);
+    transform: translateY(-2px);
+}
+</style>
+""", unsafe_allow_html=True)
+
+#the styling of the select box
+st.sidebar.markdown("""
+<style>
+/* Main dropdown container */
+div[data-baseweb="select"] {
+    background-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Dropdown menu */
+div[data-baseweb="popover"] div[data-baseweb="menu"] {
+    background-color: rgba(59, 130, 246, 0.3) !important;
+}
+
+/* Individual options */
+div[data-baseweb="popover"] div[data-baseweb="menu"] div[role="option"] {
+    background-color: rgba(240, 249, 255, 0.9) !important;
+}
+
+/* Hovered options */
+div[data-baseweb="popover"] div[data-baseweb="menu"] div[role="option"]:hover {
+    background-color: rgba(96, 165, 250, 0.5) !important;
+}
+
+/* Selected option */
+div[data-baseweb="popover"] div[data-baseweb="menu"] div[aria-selected="true"] {
+    background-color: rgba(59, 130, 246, 0.7) !important;
+}
+</style>
+""", unsafe_allow_html=True)
 
 # Simplify sidebar for single model
 st.sidebar.markdown("<h3>🧠 Model Information</h3>", unsafe_allow_html=True)
@@ -1171,14 +1225,12 @@ if predict_clicked:
                     st.markdown("- Continue blood pressure management")
         
         # Feature importance visualization
-        st.markdown("<h3>Risk Factor Analysis</h3>", unsafe_allow_html=True)
         
-        # Let user select which feature to analyze
         feature_to_compare = st.selectbox(
-            "Select feature to analyze impact on risk:",
-            ["age", "ejection_fraction", "serum_creatinine", "serum_sodium", "platelets", "creatinine_phosphokinase"],
-            index=0
-        )
+              "Select feature to analyze impact on risk:",
+             ["age", "ejection_fraction", "serum_creatinine", "serum_sodium", "platelets", "creatinine_phosphokinase"],
+              index=0
+                )
         
         # Define value ranges for each feature
         feature_ranges = {
